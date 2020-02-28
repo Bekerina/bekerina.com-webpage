@@ -1,0 +1,183 @@
+/* 1. global
+** 2. page transition
+** 3. header
+** 4.Project 
+** 5. up button
+** 6. footer
+** 7. media queries
+** 8. HOVER
+*/
+
+/*START global*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font: 15px/1.3 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #faf5f9;
+	-webkit-font-smoothing: antialiased;
+	cursor: default;
+	user-select: none;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	display: block;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/*END global*/
+
+/*START page transition*/
+body {
+	opacity: 1;
+	transition: 0.7s opacity;
+}
+body.fade {
+	opacity: 0;
+	transition: none;
+}
+/*END page transition*/
+
+/*START header*/
+header {
+	color: #313142;
+	padding-top: 30px;
+	min-height: 70px;
+	position: relative;
+	width: 100%;
+}
+#container-nav {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+#container-nav a {
+	color: #313142;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 900;
+}
+#container-nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 10px 0 10px;
+}
+#container-nav .bekerina-logo {
+	float: left;
+}
+#container-nav .bekerina-logo img {
+	margin: 0;
+	max-width: 200px;
+}
+#container-nav .menu-wrap-desktop {
+	float: right;
+	margin-top: 15px;
+}
+#container-nav a:hover {
+	color: #ff467a;
+}
+#container-nav .current a {
+	color: #ff467a;
+}
+/*END header*/
+
+/*START Project 1*/
+#fe-project a{
+    text-decoration: none;
+    align-items: center; 
+}
+#photo-of-design-1 {
+    background: url(../images/ezgif.com-optimize.gif) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.container-design {
+    float: left;
+    height: 490px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+#fe-project p {
+    text-align: center;
+    margin-bottom: 10;
+    color: #606fff;
+    font-size: 20px
+}
+/*temporarily*/
+#fe-project .more-soon-text {
+    text-align: center;
+    color: #606fff;
+    font-size: 40px;
+    font-weight: 900; 
+}
+/*END Project 1*/
+
+/*START up button*/
+#btnUp {
+    visibility: hidden; /*temporarily*/
+	position: fixed;
+	background-color: transparent;
+	font-size: 40px;
+	right: 10px;
+	bottom: 95px;
+	width: 50px;
+	height: 50px;
+	color: #606fff;
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+/*HOVER*/
+#btnUp:hover {
+	color: #ff467a;
+	transition: 1s;
+}
+/*END up button*/
+
+/*START footer*/
+footer {
+	padding: 20px;
+	margin-top: 200px;
+	background-color: #606fff;
+	text-align: center;
+	color: #ffffff;
+}
+/*END footer*/
+
+/*START media queries*/
+@media screen and (max-width: 815px) {
+    #container-nav .menu-wrap-desktop {
+        visibility: hidden;
+    }
+    header .menu-wrap-mobile {
+        visibility: visible;
+    }
+    #container-nav .bekerina-logo {
+        float: left;
+    }
+    .container {
+        width: 80%;  
+    }
+    .container-design {
+        width: 100%;
+        height: 450px;
+        margin-top: 10px;
+    }
+    .container p {
+        padding: 5px;
+        margin: 0;
+    }

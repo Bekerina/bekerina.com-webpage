@@ -1,0 +1,130 @@
+/* 1. global
+** 2. page transition
+** 3. header
+** 4. images
+** 5. up button
+** 6. footer
+** 7. media queries
+** 8. HOVER
+*/
+
+/*START global*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font: 15px/1.3 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf5f9;
+    -webkit-font-smoothing: antialiased;
+    cursor: default;
+    user-select: none;
+    box-sizing: border-box;
+}
+.container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: block;
+    position: relative;   
+}
+/*END global*/
+
+/*START page transition*/
+body {
+	opacity: 1;
+	transition: 0.7s opacity;
+}
+body.fade {
+	opacity: 0;
+	transition: none;
+}
+/*END page transition*/
+
+/*START header*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+header a {
+    text-decoration: none;
+}
+.back-text, .fa-long-arrow-alt-left {
+    color: #606fff;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+/*HOVER*/
+.fa-long-arrow-alt-left:hover {
+    color: #ff467a;
+    transition: 1s;
+}
+/*END header*/
+
+/*START images*/
+.container img {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+#vilma-page .vilma-web {
+    text-align: center;
+}
+section a{
+    text-decoration: none;
+    text-align: center;
+    color: #606fff;
+    font-size: 25px;
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+/*END images*/
+    
+/*START up button*/
+#btnUp {
+	position: fixed;
+	background-color: transparent;
+	font-size: 40px;
+	right: 10px;
+	bottom: 95px;
+	width: 50px;
+	height: 50px;
+	color: #606fff;
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+/*HOVER*/
+#btnUp:hover {
+	color: #ff467a;
+	transition: 1s;
+}
+/*END up button*/
+
+/*START footer*/
+footer {
+	padding: 20px;
+	margin-top: 60px;
+	background-color: #606fff;
+	text-align: center;
+	color: #ffffff;
+}
+/*END footer*/
+
+/*START Media queries*/
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    
+}

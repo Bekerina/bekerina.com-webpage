@@ -1,0 +1,535 @@
+/* 1. global
+** 2. loader
+** 3. page transition
+** 4. header
+** 5. showcase
+** 6. social media links
+** 7. about me blocks
+** 8. projects
+** 9. contacts
+**10. up button
+**11. footer
+**12. media queries
+**13. HOVER
+*/
+
+/*START global*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font: 15px/1.3 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #faf5f9;
+	-webkit-font-smoothing: antialiased;
+	cursor: default;
+	user-select: none;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	display: block;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/*END global*/
+
+/*START loader*/
+.loader {
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #606fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.block-elements {
+	display: block;
+	text-align: center;
+}
+.loader p {
+	display: block;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 800;
+	margin-top: 30px;
+}
+#loader img {
+	width: 150px;
+}
+.loader.hidden {
+	animation: fadeOut 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+/*END loader*/
+
+/*START page transition*/
+body {
+	opacity: 1;
+	transition: 0.7s opacity;
+}
+.fade {
+	opacity: 0;
+	transition: none;
+}
+/*END page transition*/
+
+/*START header*/
+#header {
+	color: #313142;
+	padding-top: 30px;
+	min-height: 70px;
+	position: absolute;
+	width: 100%;
+}
+#container-nav {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+#container-nav a {
+	color: #313142;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 900;
+}
+#container-nav ul li {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+#container-nav .bekerina-logo {
+	float: left;
+}
+#container-nav .bekerina-logo img {
+	margin: 0;
+	max-width: 200px;
+}
+#container-nav .menu-wrap-desktop {
+	float: right;
+	margin-top: 15px;
+}
+#container-nav a:hover {
+	color: #ff467a;
+}
+#container-nav .current a {
+	color: #ff467a;
+}
+/*END header*/
+
+/*START showcase*/
+#showcase {
+	background: url(../images/cover-01.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	text-align: center;
+	color: #313142;
+}
+.main-title {
+	margin-top: 220px;
+}
+#showcase .title-line {
+	font-size: 72px;
+	line-height: 1;
+	font-weight: 900;
+}
+#showcase i {
+	font-size: 40px;
+	padding: 30px;
+	color: #fff;
+}
+/*END showcase*/
+
+/*START social media links*/
+#social-media {
+	padding: 15px;
+	text-align: center;
+}
+#social-media h2 {
+	text-decoration: none;
+	margin: 25px 0px 5px 0px;
+	padding: 0px;
+	font-weight: 900;
+	font-size: 28px;
+}
+#social-media a {
+	text-decoration: none;
+	color: #313142;
+	font-weight: 900;
+	font-size: 28px;
+	padding: 10px;
+	margin: 19px;
+}
+/*HOVER*/
+#social-media a:hover {
+	color: #606fff;
+	transition: 1s;
+}
+/*END social media links*/
+
+/*START about me blocks*/
+#boxes-about {
+	margin-top: 60px;
+	color: #313142;
+}
+#boxes-about .box {
+	float: left;
+	text-align: center;
+	width: 31%;
+	padding: 10px;
+	min-width: 300px;
+}
+#photo-of-author {
+	background: url(../images/karolina-bekeryte_image.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: 350px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.title-container {
+	margin-top: 130px;
+}
+#photo-of-author span {
+	margin-top: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 62px;
+	font-weight: 900;
+	background-color: #606fff;
+}
+#boxes-about .box h2 {
+	margin: 0;
+	padding: 0 0 0 10px;
+	font-size: 40px;
+}
+#boxes-about .box p {
+	margin: 0;
+	padding: 0 10px 10px 10px;
+	font-size: 17px;
+}
+/*END about me blocks*/
+
+/*START lets talk*/
+#lets-talk-link {
+	padding: 20px;
+	text-align: center;
+	margin: 40px 0 20px 0;
+	background: #606fff;
+	color: #ffffff;
+}
+#lets-talk-link p {
+	margin: 0px;
+}
+#lets-talk-link a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-size: 40px;
+	font-weight: 900;
+	color: #ffffff;
+}
+#lets-talk-link i {
+	font-size: 30px;
+}
+.glow {
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 0px #fff, 0 0 8px #fff
+	}
+	to {
+		text-shadow: 0 0 8px #fff, 0 0 15px #fff
+	}
+}
+/*HOVER*/
+#lets-talk-link a:hover {
+	cursor: pointer;
+	color: #ffebff;
+}
+/*END lets talk*/
+
+/*START projects*/
+#projects a {
+	text-decoration: none;
+	align-items: center;
+}
+#projects {
+	margin-top: 10px;
+	display: inline;
+	text-decoration: none;
+}
+#projects .container-design {
+	text-align: center;
+}
+#photo-of-design {
+	float: left;
+	background: url(../images/1_cup_package_design_kaip_kava_veikia_tave_1.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: 300px;
+	width: 49%;
+	margin-right: 10px;
+	text-align: center;
+	color: #313142;
+}
+#photo-of-programming {
+	float: left;
+	background: url(../images/front_end_development.jpeg);
+	background-size: cover;
+	background-position: center center;
+	min-height: 300px;
+	margin-top: 0px;
+	width: 49%;
+	text-align: center;
+	color: #313142;
+}
+#projects .title-container-2 span {
+	margin-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 47px;
+	font-weight: 900;
+	background-color: #606fff;
+}
+.title-container-2 {
+	margin-top: 120px
+}
+/*HOVER*/
+#projects span:hover {
+	background-color: #ff467a;
+	transition: 1s;
+}
+/*END projects*/
+
+/*START contacts*/
+#contacts {
+	color: #606fff;
+}
+#contacts .social-media-contacts {
+	text-align: center;
+	margin: 80px 0 50px 0;
+}
+#contacts p, a {
+	margin-bottom: 0px;
+	font-size: 18px;
+}
+#contacts p {
+	font-weight: 900;
+}
+#contacts .social-media-icons {
+	margin: 10px 0 10px 0;
+	padding-top: 20px;
+	border-top: 2px solid #606fff;
+}
+#contacts .social-media-icons a {
+	text-decoration: none;
+}
+#contacts .social-media-icons a i {
+	font-size: 50px;
+	color: #606fff;
+	padding: 10px;
+}
+.section-title-no-bg {
+	font-size: 40px;
+	font-weight: 900;
+	margin: 40px 0 10px 0;
+}
+fieldset {
+	border: none;
+	display: flex;
+}
+.form-text {
+	display: inline;
+}
+.form-text form {
+	width: 45%;
+	float: right;
+}
+#contacts .form-text p {
+	width: 45%;
+	float: left;
+	padding: 5px;
+	font-size: 16px;
+	font-weight: 600;
+}
+#contacts fieldset {
+	margin: 0;
+	padding: 0;
+	padding: 5px;
+}
+#contacts input, textarea {
+	border: none;
+	font-size: 16px;
+	background: #bfddff;
+	padding: 2px 15px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 30px;
+}
+#contacts textarea {
+	resize: none;
+	height: 120px;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+#contacts input[type="submit"] {
+	background-color: #ff467a;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	height: 50px;
+	width: 45%;
+	color: #ffffff;
+	font-size: 18px;
+}
+/*HOVER*/
+#contacts .social-media-icons i:hover {
+	color: #ff467a;
+	transition: 1s;
+}
+#contacts a:hover {
+	color: #ff467a;
+	cursor: pointer;
+	transition: 1s;
+}
+::-webkit-input-placeholder {
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+#contacts input[type="submit"]:hover {
+	background-color: #606fff;
+	transition: 1s;
+}
+/*END contacts*/
+
+/*START up button*/
+#btnUp {
+	position: fixed;
+	background-color: transparent;
+	font-size: 40px;
+	right: 10px;
+	bottom: 95px;
+	width: 50px;
+	height: 50px;
+	color: #606fff;
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+/*HOVER*/
+#btnUp:hover {
+	color: #ff467a;
+	transition: 1s;
+}
+/*END up button*/
+
+/*START footer*/
+footer {
+	padding: 20px;
+	margin-top: 60px;
+	background-color: #606fff;
+	text-align: center;
+	color: #ffffff;
+}
+/*END footer*/
+
+/*START media queries*/
+@media(max-width: 1217px) {
+	#boxes-about .boxes-container {
+		float: none;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
+	.box {
+		flex: 1 0 0;
+	}
+	.programming {
+		margin-top: 100px;
+	}
+	#showcase .title-line {
+		font-size: 62px;
+		line-height: 1;
+	}
+	@media screen and (max-width: 1024px) {
+		#boxes-about .boxes-container {
+			float: none;
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.box {
+			flex: 1 0 0;
+		}
+	}
+	@media screen and (max-width: 815px) {
+        .body, #contacts input, #contacts textarea, #photo-of-programming, #photo-of-design, .container, #contacts input[type="sumbit"] {
+				width: 100%;
+			}
+        #container-nav .menu-wrap-desktop {
+            visibility: hidden;
+        }
+        #header .menu-wrap-mobile {
+            visibility: visible;
+        }
+        #container-nav .bekerina-logo {
+            float: left; 
+        }
+        #projects .section-title-no-bg, #contacts .section-title-no-bg, p {
+            margin-left: 15px;
+        }
+
+        #photo-of-design {
+            margin-bottom: 20px;
+        }
+        #photo-of-author {
+            background-position: -50px;
+        }
+        #contacts .form-text form {
+            width: 95%;
+            margin-bottom: 30px;
+            margin-right: 30px;
+        }
+        #contacts input, #contacts textarea {
+            width: 100%;
+            margin-left: 20px;
+        }
+        #contacts input[type="submit"] {
+            width: 100%;
+            margin-left: 20px;
+        }
+        #contacts .form-text p {
+            width: 95%;
+            margin-bottom: 30px;
+            
+        }
+    }
+/*END media queries*/

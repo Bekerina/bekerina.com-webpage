@@ -1,0 +1,296 @@
+/* 1. global
+** 2. page transition
+** 3. header
+** 4. project buttons
+** 5. project 1
+** 6. project 2
+** 7. project 3
+** 8. project 4
+** 9. project 5
+**10. project 6
+**11. up button
+**12. footer
+**13. media queries
+**14. HOVER
+*/
+
+/*START global*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font: 15px/1.3 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #faf5f9;
+	-webkit-font-smoothing: antialiased;
+	cursor: default;
+	user-select: none;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	display: block;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/*END global*/
+
+/*START page transition*/
+body {
+	opacity: 1;
+	transition: 0.7s opacity;
+}
+body.fade {
+	opacity: 0;
+	transition: none;
+}
+/*END page transition*/
+
+/*START header*/
+header {
+	color: #313142;
+	padding-top: 30px;
+	min-height: 70px;
+	position: relative;
+	width: 100%;
+}
+#container-nav {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+#container-nav a {
+	color: #313142;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 900;
+}
+#container-nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 10px 0 10px;
+}
+#container-nav .bekerina-logo {
+	float: left;
+}
+#container-nav .bekerina-logo img {
+	margin: 0;
+	max-width: 200px;
+}
+#container-nav .menu-wrap-desktop {
+	float: right;
+	margin-top: 15px;
+}
+#container-nav a:hover {
+	color: #ff467a;
+}
+#container-nav .current a {
+	color: #ff467a;
+}
+/*END header*/
+
+
+/*START projects button*/
+#d-project .project-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transform: scale3d(0.7);
+}
+#d-project .project-btn i {
+    font-size: 60px;
+    color: #606fff;
+    cursor: pointer;
+}
+/*HOVER*/
+#d-project .project-btn i:hover {
+    color: #ff467a;
+    transition: 1s;
+}
+/*HOVER*/
+.container-design:hover {
+    transition: 1s;
+    filter: blur(2px);
+}
+/*END projects button*/
+
+/*START project 1*/
+#d-project a{
+    text-decoration: none;
+    align-items: center; 
+    color: #606fff;
+}
+#d-project {
+    margin-top: 10px;
+    display: inline;
+    text-decoration: none;
+    color: #606fff;
+}
+#photo-of-design-1 {
+    background: url(../images/1_cup_package_design_kaip_kava_veikia_tave_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.container-design {
+    float: left;
+    min-height: 550px;
+    width: 75%;
+    margin-right: 30px;
+    text-align: center;
+    color: #313142;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+#d-project p {
+    margin-bottom: 0;
+}
+#d-project h1 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+#d-project input {
+    background: none;
+    border: none;
+    color: #606fff;
+    font-size: 60px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+}
+/*END project 1*/
+
+/*START project 2*/
+#photo-of-design-2 {
+    background: url(../images/2_poster_patingek_susisiekimo_paslaugos_2.jpg) no-repeat;
+     background-size: cover;
+    background-position: center center;
+}
+.align-right {
+    float: right;
+    margin-right: 0;
+    margin-left: 30px;
+}
+/*START project 2*/
+
+/*START project 3*/
+#photo-of-design-3 {
+    background: url(../images/3_poster_crazy_taco_1.jpg) no-repeat;
+     background-size: cover;
+    background-position: center center;
+}
+
+.full-photo {
+    width: 100%;
+    height: 550px;
+    margin-bottom: 20px;
+}
+.full-photo-text {
+    text-align: center;
+}
+
+.full-photo-text {
+    text-align: center;
+}
+.full-photo-text h1 {
+    margin-bottom: 0;
+}
+
+.full-photo-text p {
+    margin-top: 0;
+} 
+#d-project input {
+    margin-bottom: 60px;
+}
+/*END project 3*/
+
+/*START project 4*/
+#photo-of-design-4 {
+    background: url(../images/4_brandbook_nmc_4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/*END project 4*/
+
+/*START project 5*/
+#photo-of-design-5 {
+    background: url(../images/5_vilma_webpage_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/*END project 5*/
+
+/*START project 6*/
+#photo-of-design-6 {
+    background: url(../images/6_brandbook_coffinannasi_01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/*END project 6*/
+
+/*START up button*/
+#btnUp {
+	position: fixed;
+	background-color: transparent;
+	font-size: 40px;
+	right: 10px;
+	bottom: 95px;
+	width: 50px;
+	height: 50px;
+	color: #606fff;
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+/*HOVER*/
+#btnUp:hover {
+	color: #ff467a;
+	transition: 1s;
+}
+/*END up button*/
+
+/*START footer*/
+footer {
+	padding: 20px;
+	margin-top: 60px;
+	background-color: #606fff;
+	text-align: center;
+	color: #ffffff;
+}
+/*END footer*/
+
+/*Media queries*/
+@media screen and (max-width: 1000px) {
+    #container-nav .menu-wrap-desktop {
+        visibility: hidden;
+    }
+    header .menu-wrap-mobile {
+        visibility: visible;
+    }
+    #container-nav .bekerina-logo {
+        float: left; 
+        }
+    .container {
+        width: 100%;  
+    }
+    .container-design {
+        width: 100%; 
+        margin: 20px 0 20px 0;
+    }
+    .text-align_center {
+        text-align: center;
+        padding: 20px;
+    }
+    .text-align_center p, h1 {
+        margin: 0;    
+    }

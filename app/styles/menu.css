@@ -1,0 +1,143 @@
+/*START global*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.menu-wrap-mobile {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;  
+    z-index: 9;
+}
+.menu-wrap-mobile .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}
+.menu-wrap-mobile .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+    padding: 2rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*END global*/
+
+/*START hamburger lines*/
+.menu-wrap-mobile .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: #ff467a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+.menu-wrap-mobile .hamburger > div:before,
+.menu-wrap-mobile .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+}
+.menu-wrap-mobile .hamburger > div:after {
+    top: 10px;
+}
+/*END hamburger lines*/
+
+/*START toggler animated*/
+.menu-wrap-mobile .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+/*Make lines to X*/
+.menu-wrap-mobile .toggler:checked + .hamburger > div:before,
+.menu-wrap-mobile .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.menu-wrap-mobile .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+/*END toggler animated*/
+
+/*START menu show up*/
+.menu-wrap-mobile .toggler:checked ~ .menu {
+    visibility: visible;
+}
+.menu-wrap-mobile .toggler:checked ~ .menu {
+    visibility: visible;
+}
+.menu-wrap-mobile .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 1s;
+}
+.menu-wrap-mobile .menu .menu-bar a:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 1s;
+}
+.menu-wrap-mobile .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-wrap-mobile .menu > div {
+    background-color: #313142;
+    opacity: 0.98;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4 ease;
+}
+.menu-wrap-mobile .menu div div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vw;
+    transition: opacity 0.4 ease;
+}
+.menu-wrap-mobile li {
+    list-style: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    margin: 2rem;
+}
+.menu-wrap-mobile a {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 29px;
+    color: inherit;
+    
+}
+.menu-wrap-mobile a:hover {
+    color: #ff467a;
+}
+/*END menu show up*/
